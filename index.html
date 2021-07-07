@@ -29,13 +29,27 @@
       <a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
       <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
     </div>
+	
+	<div class="dropdown w3-right w3-hide-medium w3-hide-large">
+		<div class="hamburger w3-bar-item" onclick="Menu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<div id="myLinks" class="dropdown-content">
+			<a href="index.html" class="w3-bar-item w3-button active">Home</a>
+			<a href="about.html" class="w3-bar-item w3-button">About</a>
+			<a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
+			<a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+		</div>
+	</div>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="images/background.jpg" alt="Apartments Complex by the Sea" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
+  <div class="w3-display-middle w3-margin-top w3-center w3-hide-small">
 		<h1 class="slide-left"><span class="w3-padding opacity-min"><img src="images/logo.png" alt="Logo"></span></h1>
   </div>
 </header>
@@ -116,7 +130,7 @@
 		<p class="w3-center w3-large"><strong>4 Available Apartments!</strong></p>
 		<a href="projects.html#Gelfanco-8">
 			<div class="w3-center">
-				<button class="w3-large w3-button gelfanco-blue w3-text-white w3-border w3-round-large">Reserve Yours Now</button>
+				<button class="w3-large w3-button gelfanco-blue w3-text-white w3-border w3-round-large w3-col">Reserve Yours Now</button>
 			</div>
 		</a>
       </div>
@@ -127,6 +141,13 @@
         <div class="w3-display-topleft w3-black w3-padding">Andreas and Photini Court 2</div>
         <img class="image" src="images/Andreas_and_Photini_Court_2/main.jpg" alt="House">
 		</a>
+		
+		<p class="w3-center w3-large"><strong>SOLD</strong></p>
+		<a href="projects.html#Andreas-and-Photini-2">
+			<div class="w3-center">
+				<button class="w3-large w3-button gelfanco-blue w3-text-white w3-border w3-round-large w3-col">View</button>
+			</div>
+		</a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -135,6 +156,13 @@
         <div class="w3-display-topleft w3-black w3-padding">Eleni Complex</div>
         <img class="image" src="images/Eleni_Complex/main.jpg" alt="House">
 		</a>
+		
+		<p class="w3-center w3-large"><strong>SOLD</strong></p>
+		<a href="projects.html#Eleni-Complex">
+			<div class="w3-center">
+				<button class="w3-large w3-button gelfanco-blue w3-text-white w3-border w3-round-large w3-col">View</button>
+			</div>
+		</a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -142,6 +170,13 @@
 		<a href="projects.html#Savva-Complex">
         <div class="w3-display-topleft w3-black w3-padding">Savva Complex</div>
         <img class="image" src="images/Savva_Complex/main.jpg" alt="House">
+		</a>
+		
+		<p class="w3-center w3-large"><strong>SOLD</strong></p>
+		<a href="projects.html#Savva-Complex">
+			<div class="w3-center">
+				<button class="w3-large w3-button gelfanco-blue w3-text-white w3-border w3-round-large w3-col">View</button>
+			</div>
 		</a>
       </div>
     </div>
@@ -205,6 +240,20 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	
+	<script>
+		function Menu(hamburger) {
+			hamburger.classList.toggle("change");
+			
+			var x = document.getElementById("myLinks");
+			
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+	</script>
 
 	<script>
 		if ($('.counter').length){

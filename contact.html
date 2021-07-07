@@ -28,11 +28,25 @@
       <a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
       <a href="contact.html" class="w3-bar-item w3-button active">Contact</a>
     </div>
+	
+	<div class="dropdown w3-right w3-hide-medium w3-hide-large">
+		<div class="hamburger w3-bar-item" onclick="Menu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<div id="myLinks" class="dropdown-content">
+			<a href="index.html" class="w3-bar-item w3-button">Home</a>
+			<a href="about.html" class="w3-bar-item w3-button">About</a>
+			<a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
+			<a href="contact.html" class="w3-bar-item w3-button active">Contact</a>
+		</div>
+	</div>
   </div>	
 </div>
 
 <!-- Sidenav (sit on left) -->
-<div class="sidenav">
+<div class="sidenav w3-hide-small">
 	<p>Contact Info</p>
 		
 	<div id="my-footer" class="sidenav-sub-section">
@@ -128,6 +142,19 @@
 	</footer>
 </div> <!-- End Of Footer -->
 
+<script>
+	function Menu(hamburger) {
+		hamburger.classList.toggle("change");
+		
+		var x = document.getElementById("myLinks");
+		
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
+</script>
 
 <script>
 	window.onload = function() { 

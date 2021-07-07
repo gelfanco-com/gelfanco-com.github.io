@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="css/footer/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/ionicons.min.css">
-
-	
 </head>
 
 <body>
@@ -28,13 +26,27 @@
       <a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
       <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
     </div>
+	
+	<div class="dropdown w3-right w3-hide-medium w3-hide-large">
+		<div class="hamburger w3-bar-item" onclick="Menu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<div id="myLinks" class="dropdown-content">
+			<a href="index.html" class="w3-bar-item w3-button">Home</a>
+			<a href="about.html" class="w3-bar-item w3-button active">About</a>
+			<a href="projects.html#All" class="w3-bar-item w3-button">Projects</a>
+			<a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+		</div>
+	</div>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="images/background.jpg" alt="apartments complex by the sea" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
+  <div class="w3-display-middle w3-margin-top w3-center w3-hide-small">
 		<h1 class="slide-left"><span class="w3-padding opacity-min"><img src="images/logo.png" alt="Logo"></span></h1>
   </div>
 </header>
@@ -140,7 +152,19 @@
 	</footer>
 </div> <!-- End Of Footer -->
 
-
+	<script>
+		function Menu(hamburger) {
+			hamburger.classList.toggle("change");
+			
+			var x = document.getElementById("myLinks");
+			
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+	</script>
 
 </body></html>
 
