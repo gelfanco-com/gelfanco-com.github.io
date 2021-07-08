@@ -74,7 +74,7 @@
 	 flex-wrap: wrap;
 }
  #My-table .wrap-table100 {
-	 min-width: 500px;
+	 min-width: 350px;
 }
  #My-table table {
 	 border-spacing: 1;
@@ -195,31 +195,48 @@
 	}
 	 #My-table table tbody tr td:nth-child(1):before {
 		 content: "Apartment No.";
+		 font-weight: 900;
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(2):before {
 		 content: "Price";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(3):before {
 		 content: "Bedrooms";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(4):before {
 		 content: "Total Covered Area (m^2)";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(5):before {
 		 content: "Uncovered Area (m^2)";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(6):before {
 		 content: "Parking Area (m^2)";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(7):before {
 		 content: "Total Area (m^2)";
+		 text-align: left;
 	}
 	 #My-table table tbody tr td:nth-child(8):before {
 		 content: "Storage";
+		 text-align: left;
 	}
 	 #My-table .column1, #My-table .column2, #My-table .column3, #My-table .column4, #My-table .column5, #My-table .column6, #My-table .column7, #My-table .column8 {
 		 width: 100%;
 	}
+	
+	#My-table .column1 {
+		 padding-left: 0px;
+	}
+	#My-table .column8 {
+		 padding-right: 0px;
+	}
+	
 	 #My-table tbody tr {
 		 font-size: 14px;
 	}
