@@ -74,7 +74,7 @@
 	 flex-wrap: wrap;
 }
  #My-table .wrap-table100 {
-	 min-width: 350px;
+	 min-width: 300px;
 }
  #My-table table {
 	 border-spacing: 1;
@@ -240,8 +240,7 @@
 	 #My-table tbody tr {
 		 font-size: 14px;
 	}
-}
- @media (max-width: 576px) {
+	
 	 #My-table .container-table100 {
 		 padding-left: 15px;
 		 padding-right: 15px;
