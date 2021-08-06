@@ -76,19 +76,20 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="images/CEO.jpg" alt="Glykerios" style="width:75%">
       <h3>Glykerios Soteriou</h3>
-      <p class="w3-opacity">CEO, Founder &amp; Chairman of the Board</p>
-      <p>Glykerios founded the company in 2001 and managed to grow it to the company it is today.
-		He has a proven 20-year track record of excellent customer satisfaction. He has degrees in Business Administration and Marketing.<br><br></p>
+      <p id="titleCEO" class="w3-opacity">CEO, Founder &amp; Chairman of the Board</p>
+      <p class="bio">
+		Glykerios founded the company in 2001 and managed to grow it to the company it is today.
+		He has a proven 20-year track record of excellent customer satisfaction. He studied Business Administration.
+	  </p>
       <p><form action="contact.html"><button type="submit" class="w3-button w3-light-grey w3-block">Contact</button></form></p>
     </div>
 	
 	<div class="w3-col l3 m6 w3-margin-bottom">
       <img src="images/Eleni.jpg" alt="Eleni" style="width:75%">
       <h3>Eleni Soteriou</h3>
-      <p class="w3-opacity">Secretary and Member of the Board</p>
-      <p>
+      <p class="w3-opacity title">Secretary and Member of the Board</p>
+      <p class="bio">
 		Eleni has been alongside Glykerios since the founding of the company and her strong organisation skills have helped the company gain its reputation.
-		<br><br><br><br>
 	  </p>
       <p><form action="contact.html"><button type="submit" class="w3-button w3-light-grey w3-block">Contact</button></form></p>
     </div>
@@ -96,19 +97,22 @@
 	<div class="w3-col l3 m6 w3-margin-bottom">
       <img src="images/Andreas.jpg" alt="Andreas" style="width:75%">
       <h3>Andreas Soteriou</h3>
-      <p class="w3-opacity">CTO</p>
-      <p>Andreas is a Maths graduate from the University of Cambridge
-		with a postgrad in Computer Vision, Robotics and Machine Learning from the University of Surrey.
-		His technological literacy combined with his problem-solving skills make him an invaluable asset to our company.</p>
+      <p class="w3-opacity title">CTO</p>
+      <p id="bioAndrew">
+		Andreas is a Maths graduate from the University of Cambridge with a postgrad in Computer Vision, Robotics and Machine Learning from the University of Surrey.
+		His technological literacy combined with his problem-solving skills make him an invaluable asset to our company.
+	  </p>
       <p><form action="contact.html"><button type="submit" class="w3-button w3-light-grey w3-block">Contact</button></form></p>
     </div>
 
 	<div class="w3-col l3 m6 w3-margin-bottom">
       <img src="images/Fotini.jpg" alt="Fotini" style="width:75%">
       <h3>Fotini Soteriou</h3>
-      <p class="w3-opacity">CFO &amp; Head of Marketing</p>
-      <p>Fotini has a BSc (Chemistry) from the University of Surrey.
-		Her analytical mind along with her excellent interpersonal and communication skills make her a perfect fit to lead our Marketing division.<br><br><br></p>
+      <p class="w3-opacity title">CFO &amp; Head of Marketing</p>
+      <p class="bio">
+		Fotini has a BSc (Chemistry) from the University of Surrey.
+		Her analytical mind along with her excellent interpersonal and communication skills make her a perfect fit to lead our Marketing division.
+	  </p>
       <p><form action="contact.html"><button type="submit" class="w3-button w3-light-grey w3-block">Contact</button></form></p>
     </div>
   </div>
@@ -179,6 +183,35 @@
 				x.style.display = "block";
 			}
 		}
+		
+		var bio = document.getElementsByClassName("bio");
+		var andrew = document.getElementById("bioAndrew").offsetHeight;
+		for(i=0;i<3;i++) {
+			bio[i].style.height = andrew + "px";
+		};
+		
+		window.addEventListener('resize', function(event) {
+			var andrew = document.getElementById("bioAndrew").offsetHeight;
+			
+			for(i=0;i<3;i++) {
+				bio[i].style.height = andrew + "px";
+			};
+		}, true);
+		
+		var title = document.getElementsByClassName("title");
+		var CEO = document.getElementById("titleCEO").offsetHeight;
+		for(i=0;i<3;i++) {
+			title[i].style.height = CEO + "px";
+		};
+		
+		window.addEventListener('resize', function(event) {
+			/*if(window.width() >= 993){*/
+				var CEO = document.getElementById("titleCEO").offsetHeight;
+				for(i=0;i<3;i++) {
+					title[i].style.height = CEO + "px";
+				};
+			/*};*/
+		}, true);
 	</script>
 
 </body></html>
